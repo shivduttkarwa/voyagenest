@@ -38,8 +38,10 @@
 /* Editorial scale, and tight. A trip name is the largest thing on the page
    because it is the only thing on the page that is a title. */
 .detail-hero h1 {
+  font-family: var(--font-statement);
+  font-weight: 500;
   color: #fff;
-  font-size: clamp(2.1rem, 5.2vw, 4.25rem);
+  font-size: clamp(2.52rem, 6.24vw, 5.1rem);
   line-height: 1.02;
   letter-spacing: -0.03em;
   margin: 0.75rem 0 clamp(1.25rem, 3vw, 2rem);

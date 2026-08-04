@@ -946,7 +946,14 @@
 @media (max-width: 640px) {
   .page-hero { padding: 11.3rem 0; }
 }
-.page-hero h1 { color: #fff; margin: 0.875rem 0 0.625rem; }
+.page-hero h1 {
+  margin: 0.875rem 0 0.625rem;
+  font-family: var(--font-statement);
+  font-weight: 400;
+  font-size: clamp(2.52rem, 4.8vw, 3.96rem);
+  letter-spacing: -0.025em;
+  color: #fff;
+}
 .page-hero p { color: rgba(255, 255, 255, 0.85); max-width: 35rem; }
 .page-hero .eyebrow { color: #ffd9bf; }
 .breadcrumb { display: flex; gap: 0.5rem; align-items: center; font-size: 0.85rem; color: rgba(255, 255, 255, 0.75); margin-bottom: 0.5rem; flex-wrap: wrap; }
