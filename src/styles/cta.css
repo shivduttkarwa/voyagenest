@@ -17,13 +17,11 @@
   background: var(--blue-ink);
 }
 
-/* The listing-page variant. A full screen is right at the end of the homepage,
-   where it is the last beat of a long story. At the foot of a page someone is
-   browsing it reads as a wall — they came to scan a grid, and a screen-height
-   interruption between the last card and the footer costs more than it earns.
-   Sized as a band instead: tall enough to land, short enough to pass. */
+/* The listing-page variant holds most of the desktop viewport while still
+   leaving the page transition visible. The phone height is set separately
+   below with svh so browser chrome is accounted for. */
 .cta-full--compact {
-  min-height: clamp(21rem, 44vh, 29rem);
+  min-height: 80vh;
   padding: clamp(3rem, 7vw, 5rem) 0;
 }
 

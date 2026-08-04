@@ -23,7 +23,7 @@ export default function Accordion({ items, defaultOpen = -1 }) {
                 {item.day && <span className="tl-day" style={{ display: "block" }}>{item.day}</span>}
                 {item.title}
               </span>
-              <span className="acc-icon">+</span>
+              <span className="acc-icon" aria-hidden="true" />
             </button>
             <div className="acc-body" style={{ maxHeight: isOpen ? "400px" : 0 }}>
               <div className="acc-body-inner">{item.body}</div>
