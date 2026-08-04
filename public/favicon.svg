@@ -1,9 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="16 26 112 100">
-  <!-- VoyageNest mark: abstract bird returning to a nest -->
-  <g stroke="#0E4B9A" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M25 54C43 54 59 63 72 80C85 63 101 54 119 54"/>
-    <path d="M31 89C52 105 92 105 113 89"/>
-    <path d="M42 105C58 115 86 115 102 105"/>
-  </g>
-  <circle cx="72" cy="40" r="7" fill="#E0613A"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-21 12 372 372" role="img" aria-label="VoyageNest">
+  <!-- VoyageNest mark: the location-pin symbol from voyagenest-logo.svg -->
+  <path fill="#0e4b9a" fill-rule="evenodd" d="M 165,22 C 86,22 35,83 35,159 35,254 165,374 165,374 165,374 295,254 295,159 295,83 244,22 165,22 Z m 0,30 c 56,0 98,44 98,107 0,61 -43,103 -98,103 C 110,262 67,220 67,159 67,96 109,52 165,52 Z"/>
+  <path fill="#0e4b9a" d="m 165,70 24,100 -24,-17 -24,17 z"/>
+  <path fill="none" stroke="#e0613a" stroke-width="16" stroke-linecap="round" d="m 83,145 q 82,77 164,0"/>
+  <path fill="none" stroke="#e0613a" stroke-width="14" stroke-linecap="round" d="m 80,174 q 85,70 170,0"/>
+  <path fill="none" stroke="#e0613a" stroke-width="13" stroke-linecap="round" d="m 87,203 q 78,55 156,0"/>
 </svg>
