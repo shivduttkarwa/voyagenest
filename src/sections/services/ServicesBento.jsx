@@ -33,7 +33,7 @@ export default function ServicesBento() {
       <div className="container sv-shell">
         <div className="sv-head">
           <span className="eyebrow">What we do</span>
-          <h2 id="services-title">Nine ways<br /><span>we carry the load.</span></h2>
+          <h2 id="services-title" className="display-2">Nine ways we carry the load</h2>
           <p className="sv-intro">Not a menu to choose from — take one, take all nine. Most travellers start with one and end up handing us the lot.</p>
 
           <Button icon="arrow" onClick={() => openEnquiry()}>Hand Us the Whole Trip</Button>
@@ -46,6 +46,7 @@ export default function ServicesBento() {
               key={s.title}
               className="sv-item"
               role="listitem"
+              onClick={() => openEnquiry(s.title)}
             >
               <span className="sv-ico"><Icon name={s.icon} /></span>
 
@@ -58,7 +59,6 @@ export default function ServicesBento() {
                 variant="ghost"
                 size="sm"
                 icon="arrow"
-                onClick={() => openEnquiry(s.title)}
                 aria-label={`Enquire about ${s.title}`}
               >
                 Enquire

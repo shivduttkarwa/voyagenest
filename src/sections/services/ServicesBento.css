@@ -21,22 +21,15 @@
 }
 
 .sv-head h2 {
-  margin: 1.5rem 0 1.25rem;
-  font-family: var(--font-statement);
-  font-size: clamp(3rem, 5.2vw, 5rem);
-  font-weight: 500;
-  line-height: 0.98;
-  letter-spacing: -0.052em;
-  color: var(--ink);
+  max-width: 12ch;
+  margin: 0.875rem 0 0.85rem;
 }
-
-.sv-head h2 span { color: #a8acb4; }
 
 .sv-intro {
   max-width: 30rem;
   margin-bottom: 2rem;
-  font-size: clamp(1rem, 1.35vw, 1.08rem);
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.7;
   color: var(--body);
 }
 
@@ -46,6 +39,9 @@
 }
 
 .sv-item {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
   display: grid;
   grid-template-columns: 3.25rem minmax(0, 1fr) auto;
   gap: clamp(1rem, 2vw, 1.5rem);
@@ -53,6 +49,25 @@
   min-height: 7.75rem;
   padding: 1.35rem 0;
   border-bottom: 0.0625rem solid var(--line);
+  cursor: pointer;
+}
+
+.sv-item::before {
+  content: "";
+  position: absolute;
+  inset: 0.4rem -1rem;
+  z-index: -1;
+  border-radius: var(--r-md);
+  background: linear-gradient(90deg, var(--orange-soft), rgba(251, 240, 234, 0.22));
+  opacity: 0;
+  transform: scaleX(0.985);
+  transition: opacity 0.32s ease, transform 0.45s var(--ease-out);
+}
+
+.sv-item:hover::before,
+.sv-item:has(.btn:focus-visible)::before {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 .sv-ico {
@@ -63,6 +78,7 @@
   border-radius: 50%;
   background: var(--orange-soft);
   color: var(--orange);
+  transition: transform 0.4s var(--ease-spring), background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sv-ico svg {
@@ -70,23 +86,37 @@
   height: 1.2rem;
 }
 
-.sv-copy { min-width: 0; }
+.sv-item:hover .sv-ico,
+.sv-item:has(.btn:focus-visible) .sv-ico {
+  transform: translateY(-0.15rem);
+  background: #fff;
+  box-shadow: 0 0.55rem 1.3rem rgba(224, 97, 58, 0.14);
+}
+
+.sv-copy {
+  min-width: 0;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.sv-item:hover .sv-copy,
+.sv-item:has(.btn:focus-visible) .sv-copy { transform: translateX(0.18rem); }
 
 .sv-item h3 {
   margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(1.05rem, 1.45vw, 1.27rem);
-  font-weight: 650;
-  letter-spacing: -0.025em;
+  font-size: clamp(1.1rem, 1.45vw, 1.3rem);
   color: var(--ink);
+  transition: color 0.3s ease;
 }
+
+.sv-item:hover h3,
+.sv-item:has(.btn:focus-visible) h3 { color: var(--blue); }
 
 .sv-item p {
   max-width: 45rem;
   margin-top: 0.38rem;
-  font-size: 0.86rem;
-  line-height: 1.55;
-  color: #747b89;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--body);
 }
 
 .sv-item > .btn { justify-self: end; }
@@ -102,17 +132,11 @@
     max-width: 46rem;
   }
 
-  .sv-head h2 { font-size: clamp(3.3rem, 9vw, 5.6rem); }
   .sv-intro { max-width: 40rem; }
 }
 
 @media (max-width: 640px) {
   .sv { padding: 4.5rem 0; }
-
-  .sv-head h2 {
-    margin-top: 1.25rem;
-    font-size: clamp(3rem, 15vw, 4.2rem);
-  }
 
   .sv-item {
     grid-template-columns: 2.75rem minmax(0, 1fr);
@@ -133,11 +157,16 @@
   }
 
   .sv-item h3 { font-size: 1rem; }
-  .sv-item p { font-size: 0.81rem; }
+  .sv-item p { font-size: 0.84rem; }
 
   .sv-item > .btn {
     grid-column: 2;
     justify-self: start;
     margin-top: -0.25rem;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sv-item:hover .sv-ico,
+  .sv-item:hover .sv-copy { transform: none; }
 }
