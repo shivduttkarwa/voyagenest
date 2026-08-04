@@ -1,12 +1,15 @@
 import { FALLBACK_IMG, IMG } from "../../data/packages";
+import asset from "../../asset";
 import Reveal from "../../components/Reveal";
 import SectionHead from "../../components/SectionHead";
 import "./CrewPasses.css";
 
 /* The team as crew passes with machine-readable strips. */
+const FOUNDER = asset("images/hero/founder-james-carter.jpg");
+
 const TEAM = [
   {
-    name: "James Carter", role: "Founder & Chief Explorer", img: IMG("photo-1560250097-0b93528c311a", 600),
+    name: "James Carter", role: "Founder & Chief Explorer", img: FOUNDER,
     fields: [["On the road since", "2014"], ["Known for", "Replying at 2 a.m."]],
     mrz: ["P<VNEST<<<JAMES<CARTER<<<<<<<<<<<<<<<<<<<<<", "FOUNDER<<SINCE2014<<MUMBAI<<<<<<<<<<<<<<<01"]
   },

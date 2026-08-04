@@ -1,11 +1,12 @@
-import { FALLBACK_IMG, IMG } from "../../data/packages";
+import { FALLBACK_IMG } from "../../data/packages";
+import asset from "../../asset";
 import Button from "../../components/Button";
 import Reveal from "../../components/Reveal";
 import { useUI } from "../../components/UIContext";
 import "./FirstEntry.css";
 
 /* The founder — same portrait the crew pass below carries. */
-const FOUNDER = IMG("photo-1560250097-0b93528c311a", 900);
+const FOUNDER = asset("images/hero/founder-james-carter.jpg");
 
 const onImgError = (e) => { e.currentTarget.onerror = null; e.currentTarget.src = FALLBACK_IMG; };
 
