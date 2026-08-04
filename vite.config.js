@@ -10,7 +10,7 @@ export default defineConfig({
 
      Change this in one place if the site ever moves to a custom domain or a
      user page — it becomes "/" and asset() turns into a no-op. */
-  base: "/trip-utsav/",
+  base: "/voyagenest/",
   /* host: true binds to 0.0.0.0 rather than localhost, so the dev server is
      reachable from a phone on the same WiFi — plain `npm run dev` is enough, no
      --host flag. strictPort holds the address at :5173 instead of walking up to
