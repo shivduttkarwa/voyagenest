@@ -39,14 +39,22 @@ export default function ServicesBento() {
           <Button icon="arrow" onClick={() => openEnquiry()}>Hand Us the Whole Trip</Button>
         </div>
 
-        <div className="sv-list" role="list">
+        <div className="sv-list">
           {SERVICES.map((s) => (
             <Reveal
               as="article"
               key={s.title}
               className="sv-item"
-              role="listitem"
+              role="button"
+              tabIndex={0}
+              aria-label={`Enquire about ${s.title}`}
               onClick={() => openEnquiry(s.title)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  openEnquiry(s.title);
+                }
+              }}
             >
               <span className="sv-ico"><Icon name={s.icon} /></span>
 
@@ -55,14 +63,6 @@ export default function ServicesBento() {
                 <p>{s.text}</p>
               </div>
 
-              <Button
-                variant="ghost"
-                size="sm"
-                icon="arrow"
-                aria-label={`Enquire about ${s.title}`}
-              >
-                Enquire
-              </Button>
             </Reveal>
           ))}
         </div>
