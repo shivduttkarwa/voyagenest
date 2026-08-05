@@ -33,9 +33,12 @@
   color: var(--blue);
 }
 .ab-id-main { display: flex; gap: 1.3rem; padding: 1.3rem 1.4rem 1.4rem; }
+/* 40% of the card's content width — the portrait scales with the pass rather
+   than sitting at a fixed size, so the face still reads at the wide end. The
+   dl alongside is flex:1, so it takes whatever the gap leaves. */
 .ab-id-photo {
-  flex: none;
-  width: clamp(8rem, 11vw, 9rem);
+  flex: 0 0 40%;
+  width: 40%;
   aspect-ratio: 3 / 3.7;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -90,7 +93,6 @@
 
 @media (max-width: 560px) {
   .ab-id-main { gap: 1rem; }
-  .ab-id-photo { width: 7.25rem; }
   .ab-id dl { grid-template-columns: 1fr; gap: 0.6rem; }
   .ab-mrz { font-size: 0.64rem; }
 }
