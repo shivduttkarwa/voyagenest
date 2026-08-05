@@ -5,7 +5,7 @@ import SectionHead from "../../components/SectionHead";
 import "./CrewPasses.css";
 
 /* The team as crew passes with machine-readable strips. */
-const portrait = (name) => asset(`images/team/${name}.png`);
+const portrait = (name) => asset(`images/team/${name}.webp`);
 
 const TEAM = [
   {

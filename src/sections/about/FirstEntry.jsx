@@ -6,7 +6,7 @@ import { useUI } from "../../components/UIContext";
 import "./FirstEntry.css";
 
 /* The founder — same portrait the crew pass below carries. */
-const FOUNDER = asset("images/hero/founder-rohan-mehta.jpg");
+const FOUNDER = asset("images/hero/founder-rohan-mehta.webp");
 
 const onImgError = (e) => { e.currentTarget.onerror = null; e.currentTarget.src = FALLBACK_IMG; };
 

@@ -35,7 +35,7 @@
 .ab-id-main { display: flex; gap: 1.3rem; padding: 1.3rem 1.4rem 1.4rem; }
 .ab-id-photo {
   flex: none;
-  width: 6.6rem;
+  width: clamp(8rem, 11vw, 9rem);
   aspect-ratio: 3 / 3.7;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -90,7 +90,7 @@
 
 @media (max-width: 560px) {
   .ab-id-main { gap: 1rem; }
-  .ab-id-photo { width: 5.6rem; }
+  .ab-id-photo { width: 7.25rem; }
   .ab-id dl { grid-template-columns: 1fr; gap: 0.6rem; }
   .ab-mrz { font-size: 0.64rem; }
 }
