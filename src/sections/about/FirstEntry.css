@@ -13,6 +13,7 @@
 /* ---- The photograph ---- */
 .fe2-media {
   position: relative;
+  margin: 0;
   min-height: clamp(26rem, 62vh, 37rem);
   border-radius: var(--r-lg);
   overflow: hidden;
@@ -26,17 +27,79 @@
   /* A portrait: keep the face in frame however tall the column runs. */
   object-position: 50% 22%;
 }
-.fe2-tag {
+/* A scrim under the nameplate so the plate lands on tone, not on whatever
+   the photograph happens to be doing at the foot of the crop. */
+.fe2-media::after {
+  content: "";
   position: absolute;
-  left: 1.25rem;
-  bottom: 1.1rem;
+  inset: auto 0 0;
+  height: 42%;
+  background: linear-gradient(to top, rgba(7, 31, 66, 0.62), rgba(7, 31, 66, 0.16) 48%, transparent);
+  pointer-events: none;
+}
+
+/* ---- The nameplate ----
+   Frosted plate laid across the foot of the photograph: name in the heading
+   serif, post in the same mono the crew passes and the customs form use, and
+   an orange rule down the left edge to tie it to the brand. */
+.fe2-plate {
+  position: absolute;
+  z-index: 1;
+  left: clamp(0.85rem, 2.2vw, 1.4rem);
+  right: clamp(0.85rem, 2.2vw, 1.4rem);
+  bottom: clamp(0.85rem, 2.2vw, 1.4rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.15rem 0.9rem 1.35rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--r-md);
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(0.875rem) saturate(1.3);
+  -webkit-backdrop-filter: blur(0.875rem) saturate(1.3);
+  box-shadow: 0 0.75rem 2rem rgba(7, 31, 66, 0.22);
+}
+.fe2-plate::before {
+  content: "";
+  position: absolute;
+  left: 0.55rem;
+  top: 0.95rem;
+  bottom: 0.95rem;
+  width: 0.1875rem;
+  border-radius: var(--r-pill);
+  background: var(--grad-orange);
+}
+.fe2-plate-id {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+  min-width: 0;
+}
+.fe2-plate-id strong {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.15rem, 1.85vw, 1.4rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--blue-ink);
+}
+.fe2-plate-id small {
   font-family: ui-monospace, "Courier New", monospace;
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   font-weight: 700;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #fff;
-  text-shadow: 0 0.08rem 0.6rem rgba(4, 14, 32, 0.65);
+  color: var(--orange-dark);
+}
+.fe2-plate-meta {
+  flex: none;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 /* ---- The type column ---- */
@@ -87,4 +150,11 @@
   .fe2 { grid-template-columns: 1fr; gap: 1.75rem; }
   .fe2-media { min-height: 0; aspect-ratio: 16 / 10; }
   .fe2-media img { position: static; aspect-ratio: 16 / 10; }
+}
+
+/* Narrow enough that the plate would run out of room: drop the est. line and
+   let the name and post have the whole width. */
+@media (max-width: 460px) {
+  .fe2-plate { padding: 0.8rem 0.95rem 0.8rem 1.15rem; }
+  .fe2-plate-meta { display: none; }
 }

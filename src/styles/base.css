@@ -24,7 +24,11 @@
   /* Neutrals — warm, premium paper tones */
   --ink: #131a2a;
   --body: #545d70;
-  --muted: #8b93a5;
+  /* Darkened from #8b93a5, which cleared 2.9:1 on white and left the mono
+     eyebrows and field labels reading as disabled text. Everything keyed to
+     this token sits on a light surface, so the change only ever adds
+     contrast — 4.5:1 on white, AA at the small sizes it is used at. */
+  --muted: #6e7788;
   --line: #ebedf3;
   /* The section band tone — a gold-tinted paper rather than a neutral grey,
      which puts the bands in the same warm family as --orange (#e0613a) and

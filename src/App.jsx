@@ -16,8 +16,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
-/* Keep disabled during the testing phase; switch to true for launch. */
-const ENABLE_PRELOADER = false;
+/* Set to false to skip the preloader during a testing phase. */
+const ENABLE_PRELOADER = true;
 
 /* Jump to top when a link is followed — and only then. */
 function ScrollToTop() {

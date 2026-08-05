@@ -1,30 +1,30 @@
-import { FALLBACK_IMG, IMG } from "../../data/packages";
+import { FALLBACK_IMG } from "../../data/packages";
 import asset from "../../asset";
 import Reveal from "../../components/Reveal";
 import SectionHead from "../../components/SectionHead";
 import "./CrewPasses.css";
 
 /* The team as crew passes with machine-readable strips. */
-const FOUNDER = asset("images/hero/founder-james-carter.jpg");
+const portrait = (name) => asset(`images/team/${name}.png`);
 
 const TEAM = [
   {
-    name: "James Carter", role: "Founder & Chief Explorer", img: FOUNDER,
+    name: "Rohan Mehta", role: "Founder & Chief Explorer", img: portrait("rohan-mehta"),
     fields: [["On the road since", "2014"], ["Known for", "Replying at 2 a.m."]],
-    mrz: ["P<VNEST<<<JAMES<CARTER<<<<<<<<<<<<<<<<<<<<<", "FOUNDER<<SINCE2014<<MUMBAI<<<<<<<<<<<<<<<01"]
+    mrz: ["P<VNEST<<<ROHAN<MEHTA<<<<<<<<<<<<<<<<<<<<<<", "FOUNDER<<SINCE2014<<MUMBAI<<<<<<<<<<<<<<<01"]
   },
   {
-    name: "Meera Nair", role: "Head of Itineraries", img: IMG("photo-1573496359142-b8d87734a5a2", 600),
+    name: "Meera Nair", role: "Head of Itineraries", img: portrait("meera-nair"),
     fields: [["On the road since", "2016"], ["Known for", "Napkin sketches that become routes"]],
     mrz: ["P<VNEST<<<MEERA<NAIR<<<<<<<<<<<<<<<<<<<<<<<", "ITINERARIES<<SINCE2016<<<<<<<<<<<<<<<<<<<02"]
   },
   {
-    name: "Arjun Bhatt", role: "Visas & Documentation", img: IMG("photo-1472099645785-5658abf4ff4e", 600),
+    name: "Arjun Bhatt", role: "Visas & Documentation", img: portrait("arjun-bhatt"),
     fields: [["On the road since", "2017"], ["Known for", "Schengen files, first attempt"]],
     mrz: ["P<VNEST<<<ARJUN<BHATT<<<<<<<<<<<<<<<<<<<<<<", "VISAS<<SINCE2017<<FIRSTATTEMPT<<<<<<<<<<<03"]
   },
   {
-    name: "Sana Qureshi", role: "On-trip Support Lead", img: IMG("photo-1580489944761-15a19d654956", 600),
+    name: "Sana Qureshi", role: "On-trip Support Lead", img: portrait("sana-qureshi"),
     fields: [["On the road since", "2019"], ["Known for", "Fixing missed flights before breakfast"]],
     mrz: ["P<VNEST<<<SANA<QURESHI<<<<<<<<<<<<<<<<<<<<<", "SUPPORT<<SINCE2019<<TIMEZONE<YOURS<<<<<<<04"]
   }

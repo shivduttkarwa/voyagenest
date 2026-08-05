@@ -6,7 +6,7 @@ import { useUI } from "../../components/UIContext";
 import "./FirstEntry.css";
 
 /* The founder — same portrait the crew pass below carries. */
-const FOUNDER = asset("images/hero/founder-james-carter.jpg");
+const FOUNDER = asset("images/hero/founder-rohan-mehta.jpg");
 
 const onImgError = (e) => { e.currentTarget.onerror = null; e.currentTarget.src = FALLBACK_IMG; };
 
@@ -15,17 +15,24 @@ const onImgError = (e) => { e.currentTarget.onerror = null; e.currentTarget.src 
  * Photograph on one side, type on the other, and the hierarchy carried by
  * scale alone: the father's sentence is the biggest thing in the text
  * column, set as a pull-quote between two hairlines the way a magazine
- * would run it. The only mark on the photograph is a mono place-and-date
- * tag. No paper, no prop. */
+ * would run it. The only mark on the photograph is the nameplate — a
+ * frosted plate carrying the founder's name and post, in the same
+ * document language as the crew passes below. */
 export default function FirstEntry() {
   const { openEnquiry } = useUI();
 
   return (
     <section className="section">
       <div className="container fe2">
-        <Reveal className="fe2-media" variant="left">
-          <img src={FOUNDER} alt="James Carter, founder of VoyageNest" onError={onImgError} />
-          <span className="fe2-tag" aria-hidden="true">James Carter · Founder & Chief Explorer</span>
+        <Reveal as="figure" className="fe2-media" variant="left">
+          <img src={FOUNDER} alt="Rohan Mehta, founder of VoyageNest" onError={onImgError} />
+          <figcaption className="fe2-plate">
+            <span className="fe2-plate-id">
+              <strong>Rohan Mehta</strong>
+              <small>Founder &amp; Chief Explorer</small>
+            </span>
+            <span className="fe2-plate-meta" aria-hidden="true">Est. 2014 · Mumbai</span>
+          </figcaption>
         </Reveal>
 
         <Reveal className="fe2-body" variant="right">

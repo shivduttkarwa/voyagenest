@@ -43,7 +43,7 @@ export default function CustomsDeclaration() {
           </div>
           <div className="ab-form-foot">
             <div className="ab-sign">
-              <span className="ab-sign-name">James Carter</span>
+              <span className="ab-sign-name">Rohan Mehta</span>
               <small>Signature of the undersigned</small>
             </div>
             <span className="ab-form-seal" aria-hidden="true">VoyageNest · Est. 2014 · Mumbai</span>
