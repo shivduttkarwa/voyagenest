@@ -1,66 +1,93 @@
 import { SITE } from "../../data/site";
+import Button from "../../components/Button";
+import Icon from "../../components/Icon";
 import Reveal from "../../components/Reveal";
 import SectionHead from "../../components/SectionHead";
 import "./StudioPostcard.css";
 
-/* THE PICTURE SIDE.
+/* WHERE WE ACTUALLY ARE.
  *
- * The section above is the written side of a postcard; this is the other
- * face of the same card. The map is the photograph — retro arched
- * "Greetings from Mumbai" lettering, a hand-drawn ring around where we
- * actually are — and the address and hours are printed on the caption band
- * beneath the picture, the way linen postcards captioned theirs. The white
- * band also leaves OpenStreetMap's attribution unobscured. */
+ * No embedded map. A map iframe here was decoration that cost a third-party
+ * frame and still could not do the one thing a visitor wants — route them
+ * from where they are standing. So the address is set as type, the hours sit
+ * beside it with today's row called out, and the single primary action opens
+ * Google Maps directions instead. The strip along the foot carries what the
+ * map pin used to imply: the station, the parking, the walk-in policy. */
+
+/* days: JS getDay() indices the row covers, so today can be marked. */
+const HOURS = [
+  { label: "Mon – Fri", value: "9:30 AM – 7:30 PM", days: [1, 2, 3, 4, 5] },
+  { label: "Saturday", value: "10:00 AM – 6:00 PM", days: [6] },
+  { label: "Sunday", value: "On-trip support only", days: [0] }
+];
+
+const NOTES = [
+  ["Nearest station", "Bandra (W) — 10 minutes by rickshaw"],
+  ["Parking", "Paid lot in the same building"],
+  ["Walk-ins", "Welcome — call ahead and the coffee is ready"]
+];
+
 export default function StudioPostcard() {
+  const today = new Date().getDay();
+
   return (
     <section className="section">
       <div className="container">
         <SectionHead
           layout="center"
-          eyebrow="The Picture Side"
-          title="Chai's On When You Arrive"
-          text="You've written the message side — this is the picture side, and where it lands."
+          eyebrow="The Studio"
+          title="Come Up, We'll Draw It Together"
+          text="Two minutes off Linking Road in Bandra West. Bring the dates and a rough idea — you'll leave with the route on paper."
         />
-        <Reveal className="pv-card" variant="zoom">
-          <div className="pv-map-box">
-            <iframe
-              className="pv-map"
-              title="VoyageNest office location"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=72.80%2C19.03%2C72.87%2C19.09&layer=mapnik&marker=19.0607%2C72.8330"
-              loading="lazy"
-            ></iframe>
 
-            {/* retro postcard lettering */}
-            <svg className="pv-greet" viewBox="0 0 340 150" aria-hidden="true">
-              <path id="pv-arc" d="M20 84 Q 170 22 320 84" fill="none" />
-              <text className="pv-greet-script">
-                <textPath href="#pv-arc" startOffset="50%" textAnchor="middle">Greetings from</textPath>
-              </text>
-              <text className="pv-greet-name" x="170" y="138" textAnchor="middle">MUMBAI</text>
-            </svg>
-
-            {/* the annotation a friend would ink over the photo */}
-            <span className="pv-ring" aria-hidden="true" />
-            <span className="pv-here" aria-hidden="true">we're here — come on up!</span>
-          </div>
-
-          {/* the printed caption band */}
-          <div className="pv-caption">
-            <div className="pv-cap-left">
-              <b>VoyageNest Studio</b>
-              <span>{SITE.address}</span>
-              <span>
-                <a href={SITE.phoneHref}>{SITE.phone}</a>
-                {" · "}
-                <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
-              </span>
+        <Reveal className="pv-card">
+          <div className="pv-main">
+            <div className="pv-where">
+              <span className="pv-eyebrow"><Icon name="pin" /> Bandra West · Mumbai</span>
+              <h3>VoyageNest Studio</h3>
+              <address className="pv-address">{SITE.address}</address>
+              <div className="pv-actions">
+                <Button
+                  href={SITE.directionsHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  icon="arrow"
+                >
+                  Get Directions
+                </Button>
+                <Button href={SITE.phoneHref} variant="outline" icon="phone">
+                  {SITE.phone}
+                </Button>
+              </div>
             </div>
-            <ul className="pv-cap-hours">
-              <li><span>Mon – Fri</span>9:30 AM – 7:30 PM</li>
-              <li><span>Saturday</span>10:00 AM – 6:00 PM</li>
-              <li><span>Sunday</span>On-trip support only</li>
-            </ul>
+
+            <div className="pv-hours">
+              <span className="pv-hours-title">Opening Hours</span>
+              <ul>
+                {HOURS.map((h) => {
+                  const isToday = h.days.includes(today);
+                  return (
+                    <li key={h.label} className={isToday ? "is-today" : undefined}>
+                      <span>
+                        {h.label}
+                        {isToday && <em>Today</em>}
+                      </span>
+                      <b>{h.value}</b>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
+
+          <ul className="pv-notes">
+            {NOTES.map(([k, v]) => (
+              <li key={k}>
+                <b>{k}</b>
+                {v}
+              </li>
+            ))}
+          </ul>
         </Reveal>
       </div>
     </section>
