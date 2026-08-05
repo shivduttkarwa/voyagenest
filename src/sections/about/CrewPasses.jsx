@@ -9,24 +9,24 @@ const portrait = (name) => asset(`images/team/${name}.webp`);
 
 const TEAM = [
   {
-    name: "Rohan Mehta", role: "Founder & Chief Explorer", img: portrait("rohan-mehta"),
+    name: "Arvind Saldanha", role: "Founder & Chief Explorer", img: portrait("arvind-saldanha-crew"),
     fields: [["On the road since", "2014"], ["Known for", "Replying at 2 a.m."]],
-    mrz: ["P<VNEST<<<ROHAN<MEHTA<<<<<<<<<<<<<<<<<<<<<<", "FOUNDER<<SINCE2014<<MUMBAI<<<<<<<<<<<<<<<01"]
+    mrz: ["P<VNEST<<<ARVIND<SALDANHA<<<<<<<<<<<<<<<<<<<", "FOUNDER<<SINCE2014<<MUMBAI<<<<<<<<<<<<<<<01"]
   },
   {
-    name: "Meera Nair", role: "Head of Itineraries", img: portrait("meera-nair"),
+    name: "Nithya Subramaniam", role: "Head of Itineraries", img: portrait("nithya-subramaniam"),
     fields: [["On the road since", "2016"], ["Known for", "Napkin sketches that become routes"]],
-    mrz: ["P<VNEST<<<MEERA<NAIR<<<<<<<<<<<<<<<<<<<<<<<", "ITINERARIES<<SINCE2016<<<<<<<<<<<<<<<<<<<02"]
+    mrz: ["P<VNEST<<<NITHYA<SUBRAMANIAM<<<<<<<<<<<<<<<", "ITINERARIES<<SINCE2016<<<<<<<<<<<<<<<<<<<02"]
   },
   {
-    name: "Arjun Bhatt", role: "Visas & Documentation", img: portrait("arjun-bhatt"),
+    name: "Dhruv Bhasin", role: "Visas & Documentation", img: portrait("dhruv-bhasin"),
     fields: [["On the road since", "2017"], ["Known for", "Schengen files, first attempt"]],
-    mrz: ["P<VNEST<<<ARJUN<BHATT<<<<<<<<<<<<<<<<<<<<<<", "VISAS<<SINCE2017<<FIRSTATTEMPT<<<<<<<<<<<03"]
+    mrz: ["P<VNEST<<<DHRUV<BHASIN<<<<<<<<<<<<<<<<<<<<<<", "VISAS<<SINCE2017<<FIRSTATTEMPT<<<<<<<<<<<03"]
   },
   {
-    name: "Sana Qureshi", role: "On-trip Support Lead", img: portrait("sana-qureshi"),
+    name: "Safiya Merchant", role: "On-trip Support Lead", img: portrait("safiya-merchant"),
     fields: [["On the road since", "2019"], ["Known for", "Fixing missed flights before breakfast"]],
-    mrz: ["P<VNEST<<<SANA<QURESHI<<<<<<<<<<<<<<<<<<<<<", "SUPPORT<<SINCE2019<<TIMEZONE<YOURS<<<<<<<04"]
+    mrz: ["P<VNEST<<<SAFIYA<MERCHANT<<<<<<<<<<<<<<<<<<", "SUPPORT<<SINCE2019<<TIMEZONE<YOURS<<<<<<<04"]
   }
 ];
 

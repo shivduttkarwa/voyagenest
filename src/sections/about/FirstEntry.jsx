@@ -6,7 +6,7 @@ import { useUI } from "../../components/UIContext";
 import "./FirstEntry.css";
 
 /* The founder — same portrait the crew pass below carries. */
-const FOUNDER = asset("images/hero/founder-rohan-mehta.webp");
+const FOUNDER = asset("images/hero/founder-arvind-saldanha.webp");
 
 const onImgError = (e) => { e.currentTarget.onerror = null; e.currentTarget.src = FALLBACK_IMG; };
 
@@ -25,10 +25,10 @@ export default function FirstEntry() {
     <section className="section">
       <div className="container fe2">
         <Reveal as="figure" className="fe2-media" variant="left">
-          <img src={FOUNDER} alt="Rohan Mehta, founder of VoyageNest" onError={onImgError} />
+          <img src={FOUNDER} alt="Arvind Saldanha, founder of VoyageNest" onError={onImgError} />
           <figcaption className="fe2-plate">
             <span className="fe2-plate-id">
-              <strong>Rohan Mehta</strong>
+              <strong>Arvind Saldanha</strong>
               <small>Founder &amp; Chief Explorer</small>
             </span>
             <span className="fe2-plate-meta" aria-hidden="true">Est. 2014 · Mumbai</span>
