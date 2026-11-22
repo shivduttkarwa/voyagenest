@@ -58,7 +58,7 @@
    does the job of a settle plus a ken-burns drift. The outgoing slide is being
    covered rather than counter-animated, so it simply freezes where the bloom
    caught it. */
-.hs-slide.is-in img { transform: scale(1); transition: transform 7.5s cubic-bezier(0.16, 1, 0.3, 1); }
+.hs-slide:is(.is-in, .is-out) img { transform: scale(1); transition: transform 7.5s cubic-bezier(0.16, 1, 0.3, 1); }
 
 /* One wash for the whole stack — it belongs to the slider, not to each slide. */
 .hs-scrim {
