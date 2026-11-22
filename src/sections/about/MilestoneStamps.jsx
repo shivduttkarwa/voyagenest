@@ -36,7 +36,7 @@ export default function MilestoneStamps() {
               className={`ab-stamp ab-stamp--${s.shape} ab-stamp--${s.ink}`}
               style={{ "--tilt": s.tilt, "--i": i }}
             >
-              <span className="ab-stamp-org">VoyageNest · Immigration of Joy</span>
+              <span className="ab-stamp-org">Wingspan · Immigration of Joy</span>
               <span className="ab-stamp-year">{s.year}</span>
               <strong>{s.title}</strong>
               <em>{s.detail}</em>
@@ -49,7 +49,7 @@ export default function MilestoneStamps() {
             style={{ "--i": STAMPS.length }}
             onClick={() => openEnquiry()}
           >
-            <span className="ab-stamp-org">VoyageNest · Immigration of Joy</span>
+            <span className="ab-stamp-org">Wingspan · Immigration of Joy</span>
             <span className="ab-stamp-year">20__</span>
             <strong>Space Reserved</strong>
             <em>your trip goes here — tap to claim it</em>

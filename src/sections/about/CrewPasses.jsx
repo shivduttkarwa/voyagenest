@@ -47,7 +47,7 @@ export default function CrewPasses() {
             <Reveal key={m.name} delay={(i % 2) * 0.1}>
               <article className="ab-id">
                 <div className="ab-id-strip">
-                  <span>VoyageNest · Crew Pass</span>
+                  <span>Wingspan · Crew Pass</span>
                   <span>Type P</span>
                 </div>
                 <div className="ab-id-main">

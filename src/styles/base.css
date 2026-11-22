@@ -1,7 +1,7 @@
 /* Fonts (Archivo + Comic Neue + Fraunces + Gothic A1 + Plus Jakarta Sans) are loaded via <link> in index.html */
 
 /* ============================================================
-   VOYAGENEST — Design System
+   WINGSPAN — Design System
    Travel More, Celebrate Life
    ============================================================
    1. Tokens        5. Buttons        9. Cards
@@ -82,7 +82,7 @@
   --ease-fade: cubic-bezier(0.42, 0, 0.35, 1);
   --dur: 0.45s;
 
-  --nav-h: 4.875rem;
+  --nav-h: 3.75rem;
   --container: 76.25rem;
 }
 

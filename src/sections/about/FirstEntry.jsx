@@ -25,7 +25,7 @@ export default function FirstEntry() {
     <section className="section">
       <div className="container fe2">
         <Reveal as="figure" className="fe2-media" variant="left">
-          <img src={FOUNDER} alt="Arvind Saldanha, founder of VoyageNest" onError={onImgError} />
+          <img src={FOUNDER} alt="Arvind Saldanha, founder of Wingspan" onError={onImgError} />
           <figcaption className="fe2-plate">
             <span className="fe2-plate-id">
               <strong>Arvind Saldanha</strong>
@@ -51,9 +51,9 @@ export default function FirstEntry() {
           </blockquote>
 
           <p className="fe2-close">
-            VoyageNest was registered three months later and named for that evening: the
-            <b> voyage</b> is the week away, the <b>nest</b> is what a family becomes on
-            deck.
+            Wingspan was registered three months later and named for that evening: the
+            <b> wings</b> are the journey out, the <b>span</b> is three generations
+            gathered under them.
           </p>
 
           <Button icon="arrow" onClick={() => openEnquiry()}>Plan a Trip With Us</Button>

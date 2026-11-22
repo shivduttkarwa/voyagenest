@@ -44,7 +44,7 @@ export default function StudioPostcard() {
           <div className="pv-main">
             <div className="pv-where">
               <span className="pv-eyebrow"><Icon name="pin" /> Bandra West · Mumbai</span>
-              <h3>VoyageNest Studio</h3>
+              <h3>Wingspan Studio</h3>
               <address className="pv-address">{SITE.address}</address>
               <div className="pv-actions">
                 <Button

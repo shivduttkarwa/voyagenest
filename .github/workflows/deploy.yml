@@ -35,7 +35,7 @@ jobs:
       - run: npm run build
 
       # GitHub Pages is a static host with no SPA rewrite, so a deep link like
-      # /voyagenest/packages asks for a file that does not exist. Serving the
+      # /wingspan/packages asks for a file that does not exist. Serving the
       # app itself as the 404 page hands those URLs to the client router
       # instead of showing GitHub's error page.
       - run: cp dist/index.html dist/404.html

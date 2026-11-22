@@ -30,7 +30,7 @@
   transition: border-color 0.4s ease, box-shadow 0.4s ease, height 0.4s var(--ease-out);
 }
 .navbar.scrolled {
-  height: 4rem;
+  height: 3.25rem;
   border-bottom-color: rgba(19, 26, 42, 0.06);
   box-shadow: 0 0.125rem 1rem rgba(5, 17, 38, 0.06);
 }
@@ -64,8 +64,8 @@
 }
 /* No hover state: the logo is the site's identity mark, and a masthead logo
    reads as home without one. The only transition is the scroll-shrink. */
-.brand img { height: 2.75rem; width: auto; transition: height 0.4s var(--ease-out); }
-.navbar.scrolled .brand img { height: 2.35rem; }
+.brand img { height: 2.1rem; width: auto; transition: height 0.4s var(--ease-out); }
+.navbar.scrolled .brand img { height: 1.85rem; }
 .brand:focus-visible { outline: 0.125rem solid var(--orange); outline-offset: 0.375rem; border-radius: 0.375rem; }
 
 /* Desktop navigation + fluid multi-panel mega menu */
@@ -419,8 +419,8 @@
   .nav-burger { display: flex; }
   .menu-overlay { display: block; }
   .navbar > .container { justify-content: space-between; }
-  .brand img { height: 2.8rem; }
-  .navbar.scrolled .brand img { height: 2.5rem; }
+  .brand img { height: 2.2rem; }
+  .navbar.scrolled .brand img { height: 1.95rem; }
 }
 
 @media (max-width: 860px) {

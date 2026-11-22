@@ -46,7 +46,7 @@ export default function CustomsDeclaration() {
               <span className="ab-sign-name">Arvind Saldanha</span>
               <small>Signature of the undersigned</small>
             </div>
-            <span className="ab-form-seal" aria-hidden="true">VoyageNest · Est. 2014 · Mumbai</span>
+            <span className="ab-form-seal" aria-hidden="true">Wingspan · Est. 2014 · Mumbai</span>
           </div>
         </Reveal>
       </div>

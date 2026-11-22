@@ -1,16 +1,16 @@
 /* Global site configuration — contact details, socials, nav */
 
-const ADDRESS = "2nd Floor, VoyageNest House, Linking Road, Bandra West, Mumbai 400050";
+const ADDRESS = "2nd Floor, Wingspan House, Linking Road, Bandra West, Mumbai 400050";
 
 export const SITE = {
-  name: "VoyageNest",
+  name: "Wingspan",
   tagline: "Travel More, Celebrate Life",
   phone: "+91 98765 43210",
   phoneHref: "tel:+919876543210",
-  email: "hello@voyagenest.com",
+  email: "hello@wingspantravel.com",
   whatsappNumber: "919876543210",
   whatsapp:
-    "https://wa.me/919876543210?text=Hi%20VoyageNest!%20I%27d%20like%20to%20plan%20a%20trip.",
+    "https://wa.me/919876543210?text=Hi%20Wingspan!%20I%27d%20like%20to%20plan%20a%20trip.",
   address: ADDRESS,
   /* Google Maps' cross-platform directions URL: no origin, so it routes from
      wherever the visitor actually is, and it hands off to the native app on a

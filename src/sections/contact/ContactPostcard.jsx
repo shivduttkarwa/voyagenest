@@ -67,7 +67,7 @@ export default function ContactPostcard() {
             {/* the message half — written by hand, on ruled lines. Optional:
                 the call-back only truly needs a name and a number. */}
             <div className="cp-msg">
-              <span className="cp-dear" aria-hidden="true">Dear VoyageNest,</span>
+              <span className="cp-dear" aria-hidden="true">Dear Wingspan,</span>
               <textarea
                 value={form.message}
                 onChange={set("message")}
@@ -84,7 +84,7 @@ export default function ContactPostcard() {
                 </defs>
                 <text className="cp-mark-ring">
                   <textPath href="#cp-mark-arc" textLength="455" lengthAdjust="spacingAndGlyphs">
-                    · VoyageNest Post · Mumbai · Travel More · Celebrate Life
+                    · Wingspan Post · Mumbai · Travel More · Celebrate Life
                   </textPath>
                 </text>
                 <path d="M63 106 L137 84 L105 118 L96 105 Z" fill="currentColor" />
@@ -138,7 +138,7 @@ export default function ContactPostcard() {
 
               <address className="cp-to">
                 <b>To</b>
-                <span>VoyageNest — Trip Designers</span>
+                <span>Wingspan — Trip Designers</span>
                 <span>{SITE.address}</span>
               </address>
             </div>
